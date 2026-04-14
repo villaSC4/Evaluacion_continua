@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bembos Clone - Landing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header class="bg-primary-bembos py-2 sticky-top">
+        <div class="container-fluid px-lg-5">
+            <nav class="d-flex align-items-center justify-content-between">
+                
+                <div class="header-logo">
+                    <img src="https://www.bembos.com.pe/static/version1776085287/frontend/Ngr/bembos/es_PE/images/logo.svg" alt="Bembos" class="img-fluid" style="max-height: 50px;">
+                </div>
+
+                <ul class="nav d-none d-xl-flex align-items-center mx-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold d-flex align-items-center">
+                            <i class="bi bi-list-columns-reverse me-2"></i> MENÚ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold d-flex align-items-center">
+                            <i class="bi bi-patch-check me-2"></i> PROMOS EXCLUSIVAS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold d-flex align-items-center">
+                            <i class="bi bi-heart-fill me-2"></i> PROGRAMA LEALTAD
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white fw-bold d-flex align-items-center">
+                            <i class="bi bi-shop me-2"></i> LOCALES
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white px-2">
+                            <i class="bi bi-search fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-4 text-white">
+                    <div class="d-none d-md-flex align-items-center gap-2">
+                        <i class="bi bi-telephone fs-4"></i>
+                        <div class="lh-1">
+                            <small class="d-block fw-bold" style="font-size: 0.7rem;">Llámanos</small>
+                            <span class="fw-black text-warning">01 419-1919</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 cursor-pointer">
+                        <i class="bi bi-person fs-3"></i>
+                        <div class="lh-1">
+                            <small class="d-block" style="font-size: 0.7rem;">Hola,</small>
+                            <span class="fw-bold">Iniciar Sesión</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-warning rounded-pill d-flex align-items-center px-4 py-2 fw-bold">
+                        <i class="bi bi-cart3 me-2"></i> S/ 0.00
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container-fluid p-0">
+            <div id="heroBembos" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.bembos.com.pe/media/wysiwyg/BANNER_HEADER_-_MOBILE_2_1.png" class="d-block w-100 banner-img" alt="Sorteo Shakira">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.bembos.com.pe/media/wysiwyg/BANNER_HEADER_MOBILE_1_.png" class="d-block w-100 banner-img" alt="Promo Bembos">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroBembos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroBembos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="products-section container py-5">
+            <div class="category-nav d-flex justify-content-center gap-4 flex-wrap">
+                <div class="category-card">
+                    <div class="category-btn">Hamburguesas</div>
+                    <div class="category-img-container">
+                        <img src="data:image/jpeg;base64,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" alt="Hamburguesa">
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-btn">Combos</div>
+                    <div class="category-img-container">
+                        <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146463859_2.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" alt="Combo">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="promociones container py-5">
+            <h2 class="text-center fw-bold text-uppercase">Las mejores hamburguesas</h2>
+            <h3 class="mb-4 fw-bold">PROMOCIONES</h3>
+
+            <ul class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 list-unstyled">
+                
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </section>
+        <section class="promociones container py-5">
+            <h3 class="mb-4 fw-bold">LOS MÁS VENDIDOS</h3>
+
+            <ul class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 list-unstyled">
+                
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="col">
+                    <article class="product-card h-100 shadow-sm border rounded-3 p-3 position-relative">
+                        
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-2">Nuevo</span>
+                        
+                        <div class="product-image text-center mb-3">
+                            <img src="https://www.bembos.com.pe/media/catalog/product/2/1/2146469168_1.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=400&canvas=400:400&format=jpeg" class="img-fluid" alt="Promo Chicharronera">
+                        </div>
+
+                        <div class="product-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="fw-bold m-0 fs-6">Promo Chicharronera</h4>
+                                <button class="btn btn-link p-0 text-danger">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                            
+                            <p class="text-muted small mb-3">1 Chicharronera regular, 1 papa regular, 1 gaseosa personal...</p>
+                            
+                            <div class="product-action d-flex align-items-center justify-content-between mt-auto">
+                                <div class="price-container">
+                                    <strong class="fs-5 d-block">S/ 20.90</strong>
+                                    <small class="text-decoration-line-through text-muted">S/ 29.70</small>
+                                    <span class="badge bg-danger ms-1">-29%</span>
+                                </div>
+                                
+                                <button class="btn-add-cart">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn btn-outline-primary rounded-circle"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </section>
+        <section class="container py-5">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <article class="banner-eventos rounded-3 overflow-hidden">
+                        <img src="https://www.bembos.com.pe/media/wysiwyg/bembos/CategoriasAsociadasBB/DESKTOP.webp" alt="Cotiza tus eventos con Bembos" class="img-fluid w-100">
+                    </article>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <article class="info-card d-flex align-items-center shadow-sm border rounded-3 overflow-hidden bg-white">
+                        <div class="card-image w-50">
+                            <img src="https://www.bembos.com.pe/media/wysiwyg/COBERTURA_BANNER_DESKTOP.png" alt="Zonas de reparto" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="card-text w-100 p-4">
+                            <h4 class="fw-bold fs-5 text-uppercase">Descubre nuestras zonas de reparto</h4>
+                            <p class="text-muted small">¡Pide y recibe tu pedido ahora mismo!</p>
+                            <button class="btn btn-primary-bembos rounded-pill px-4 btn-sm">Encuéntralas aquí</button>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6">
+                    <article class="info-card d-flex align-items-center shadow-sm border rounded-3 overflow-hidden bg-white">
+                        <div class="card-image w-50">
+                            <img src="https://www.bembos.com.pe/media/wysiwyg/LEALTAD_BANNER_DESKTOP.png" alt="Programa de puntos" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="card-text w-100 p-4">
+                            <h4 class="fw-bold fs-5 text-uppercase">Programa Lealtad</h4>
+                            <p class="text-muted small">¡Alcanza Destinados y que nadie te pare! Delivery Gratis + Nuggets x4 de regalo.</p>
+                            <button class="btn btn-primary-bembos rounded-pill px-4 btn-sm">Descúbrelo aquí</button>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white pt-5 pb-3 border-top">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand mb-4">
+                        <img src="https://www.bembos.com.pe/static/version1776085287/frontend/Ngr/bembos/es_PE/images/logo.svg" 
+                            alt="Bembos" class="img-fluid mb-3" style="max-height: 60px;">
+                        <p class="fw-bold mb-2">Síguenos en</p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Nuestros Productos</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Promociones</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">Hamburguesas</a></li>
+                        <li><a href="#">Pollo</a></li>
+                        <li><a href="#">Complementos</a></li>
+                        <li><a href="#">Menus</a></li>
+                        <li><a href="#">Helados</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                        <li><a href="#">Loncheritas</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Ayuda</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Comprobante electrónico</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Términos y condiciones de promociones</a></li>
+                        <li><a href="#">Políticas de datos personales</a></li>
+                        <li><a href="#">Derechos Arco</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Libro de Reclamaciones</h5>
+                        <a href="#">
+                            <img src="https://www.bembos.com.pe/static/version1776085287/frontend/Ngr/bembos/es_PE/images/libro-de-reclamaciones.jpg" alt="Libro de Reclamaciones" class="img-fluid" style="max-height: 50px;">
+                        </a>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Métodos de Pago</h5>
+                        <div class="d-flex gap-2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhfgW6C_B1NEFuFxX0PaXF1AmC6dgJ_F9jw&s" alt="Visa" width="40">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1SHuPLJLGPPdr-mIWoQvR1qDRK9M4UAbMoQ&s" alt="Mastercard" width="40">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/American_Express_logo_%282018%29.svg/1280px-American_Express_logo_%282018%29.svg.png" alt="Amex" width="40">
+                        </div>
+                    </div>
+
+                    <div>
+                        <h5 class="fw-bold mb-3">Bembos App</h5>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="#"><img src="https://storage.googleapis.com/support-kms-prod/dCVdVst3A3cmbTkiGoxcUJZq0orhKw4LPDeH" alt="Google Play" width="120"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-3 border-top">
+                <div class="col-md-12">
+                    <p class="text-muted small">© 2026 Todos los derechos reservados. <span class="fw-bold">Developed by Raquel Villafuerte</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
